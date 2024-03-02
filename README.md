@@ -48,6 +48,8 @@ O desenvolvimento de um mínimo produto viável (MVP) de um site para a criaçã
 
 O Pegasus (Programming-Enhanced Graphs Automation and Statistics Utility System) está sendo desenvolvido como uma plataforma avançada e altamente escalável para automatizar a geração de gráficos e estatísticas. Utilizando o poderoso framework Django, esta nova versão do Pegasus promete oferecer maior segurança, flexibilidade e compatibilidade com uma ampla gama de linguagens e bancos de dados.
 
+![pegasus_logo](https://github.com/pdrmglc/Pegasus/blob/main/media/logo.svg)
+
 # Banco de dados
 
 ## MySQL
@@ -55,3 +57,5 @@ O Pegasus (Programming-Enhanced Graphs Automation and Statistics Utility System)
 ### Vigilancia-Sindromica
 
 A implementação de um banco de dados é uma etapa crucial para acomodar informações provenientes de diferentes fontes em pesquisas científicas e tomadas de decisão em saúde pública. Esse banco de dados não apenas oferece maior segurança para os dados, mas também permite o refinamento e a integração de informações, facilitando análises mais abrangentes e informadas.
+
+![MySQL schema](https://github.com/pdrmglc/Portfolio/blob/main/Vigilancia-Sindromica/QuickDBD-export.svg)
