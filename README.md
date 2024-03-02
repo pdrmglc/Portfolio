@@ -58,4 +58,4 @@ O Pegasus (Programming-Enhanced Graphs Automation and Statistics Utility System)
 
 A implementação de um banco de dados é uma etapa crucial para acomodar informações provenientes de diferentes fontes em pesquisas científicas e tomadas de decisão em saúde pública. Esse banco de dados não apenas oferece maior segurança para os dados, mas também permite o refinamento e a integração de informações, facilitando análises mais abrangentes e informadas.
 
-![MySQL schema](https://github.com/pdrmglc/Portfolio/blob/main/Vigilancia-Sindromica/QuickDBD-export.svg)
+![MySQL schema](https://github.com/pdrmglc/Portfolio/blob/main/Vigilancia-Sindromica/schema.png)
