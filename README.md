@@ -10,6 +10,8 @@ Este projeto utiliza o algoritmo de gradient boosting para classificar pacientes
 
 Este projeto apresenta uma abordagem detalhada de testagem de vários modelos de machine learning para o diagnóstico de linhagens do SARS-CoV-2. A aplicação desses modelos na área da saúde permite direcionar o esforço humano para tarefas mais delicadas, como tratamento de pacientes e pesquisa científica, enquanto os algoritmos lidam com a análise e classificação de linhagens do vírus.
 
+![diagnosis_logo](https://github.com/pdrmglc/Portfolio/blob/main/Diagnosis-SC2-Classification/PosTunningMatrizConfusao.png)
+
 ### Comparison-of-Classification-Algorithms
 
 Este projeto realiza uma testagem inicial de diferentes algoritmos de machine learning para a tarefa de classificação e manipulação de dados do [Kaggle](https://www.kaggle.com/) sobre mobilidade urbana no Distrito Federal. A escolha correta de um algoritmo de aprendizado de máquina é reflexo das necessidades e características específicas de cada situação, e este estudo busca identificar o método mais adequado para analisar os dados de mobilidade urbana na região.
@@ -20,11 +22,15 @@ Este projeto realiza uma testagem inicial de diferentes algoritmos de machine le
 
 A aplicação de algoritmos não supervisionados para a clusterização de músicas é uma estratégia poderosa empregada por empresas de alto nível para criar sistemas de recomendação personalizados para seus clientes. Esses sistemas utilizam técnicas de agrupamento para identificar padrões e similaridades entre as músicas, permitindo uma recomendação mais precisa e personalizada de acordo com os gostos e preferências individuais dos usuários.
 
+![3D Scatter Plot](https://github.com/pdrmglc/Portfolio/blob/main/Clustering-Music-Genres/output/3dScatterRescaled.png)
+
 ## Processamento de linguagem natural
 
 ### Telegram-Gemini-Bot
 
 A automação do atendimento ao cliente tornou-se uma estratégia essencial para empresas e comércios modernos, e a combinação de ferramentas gratuitas, como a API do Gemini (modelo de linguagem da Google) e o Telegram, oferece uma solução poderosa e acessível para essa demanda crescente. Essa abordagem não apenas melhora a eficiência operacional, mas também eleva a experiência do cliente e impulsiona o crescimento dos negócios.
+
+![bot_logo](https://github.com/pdrmglc/Portfolio/blob/main/Telegram-Gemini-Bot/image.jpg)
 
 ### Transfer-Learning-Escritores
 
@@ -33,6 +39,8 @@ A aplicação de técnicas de transfer learning em modelos de fundação de rede
 ### Vaccine-Aproval
 
 A análise de sentimentos em tweets sobre vacinas, utilizando dados disponíveis no [Kaggle](https://www.kaggle.com/), oferece uma oportunidade valiosa para acompanhar e compreender a evolução das opiniões públicas sobre vacinação ao longo do tempo. Esta abordagem permite não apenas detectar padrões e tendências nas opiniões dos usuários das redes sociais, mas também oferece insights sobre o impacto de decisões de saúde pública e cobertura da mídia na percepção das vacinas pela população.
+
+![vacina_logo](https://github.com/pdrmglc/Portfolio/blob/main/Vaccine-Aproval/output/plotFreqRel.png)
 
 # Desenvolvimento Web
 
@@ -58,4 +66,4 @@ O Pegasus (Programming-Enhanced Graphs Automation and Statistics Utility System)
 
 A implementação de um banco de dados é uma etapa crucial para acomodar informações provenientes de diferentes fontes em pesquisas científicas e tomadas de decisão em saúde pública. Esse banco de dados não apenas oferece maior segurança para os dados, mas também permite o refinamento e a integração de informações, facilitando análises mais abrangentes e informadas.
 
-![MySQL schema](https://github.com/pdrmglc/Portfolio/blob/main/Vigilancia-Sindromica/schema.png)
+![MySQL schema](https://github.com/pdrmglc/Portfolio/blob/main/Vigilancia-Sindromica/schema.jpg)
