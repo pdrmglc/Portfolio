@@ -58,6 +58,15 @@ O Pegasus (Programming-Enhanced Graphs Automation and Statistics Utility System)
 
 ![pegasus_logo](https://github.com/pdrmglc/Pegasus/blob/main/media/logo.svg)
 
+# Análise de dados
+
+## Estatística inferencial
+
+Estes scripts foram desenvolvidos para análise estatística inferencial frequentista e são destinados à futura implementação no Website Pegasus. Eles oferecem funcionalidades para realizar testes estatísticos e visualizações de dados, permitindo a análise comparativa entre diferentes grupos de dados.
+Os scripts incluem funções para realizar uma variedade de testes estatísticos frequentistas, como Kruskal-Wallis, Mann-Whitney U, Friedman e Wilcoxon. Esses testes são úteis para comparar grupos independentes ou pareados e identificar diferenças estatisticamente significativas entre eles.
+
+![plot](https://github.com/pdrmglc/Portfolio/blob/main/Pegasus-Scripts/Estatistica/QuantitativoNaoParametricos/comparacoesVariaveis.png)
+
 # Banco de dados
 
 ## MySQL
