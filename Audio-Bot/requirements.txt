@@ -1,0 +1,7 @@
+pyaudio
+distutils
+google-generativeai
+SpeechRecognition
+pyttsx3
+setuptools
+keyboard
