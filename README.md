@@ -32,6 +32,12 @@ A automação do atendimento ao cliente tornou-se uma estratégia essencial para
 
 ![bot_logo](https://github.com/pdrmglc/Portfolio/blob/main/Telegram-Gemini-Bot/image.jpg)
 
+### Audio-Bot
+
+Este projeto consiste em um chatbot interativo capaz de entender e responder por meio de áudio. Inspirado no conceito de um mestre de RPG (role-playing game), o chatbot foi desenvolvido para proporcionar uma experiência divertida e envolvente para os usuários.
+
+![chatrpg_logo](https://github.com/pdrmglc/Portfolio/blob/main/Audio-Bot/logo_chatrpg.jpg)
+
 ### Transfer-Learning-Escritores
 
 A aplicação de técnicas de transfer learning em modelos de fundação de redes neurais baseadas em transformers, utilizando o Hub de modelos da [Hugging Face](https://huggingface.co/), representa uma abordagem poderosa e acessível para uma variedade de tarefas de processamento de linguagem natural (PLN). Esta estratégia permite o reuso de modelos pré-treinados em grandes conjuntos de dados para treinar modelos mais específicos em tarefas de interesse, levando a melhorias significativas na eficiência e desempenho do modelo.
