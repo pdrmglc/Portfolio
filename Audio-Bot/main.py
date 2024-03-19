@@ -1,6 +1,7 @@
 import google.generativeai as genai
 import keyboard
-import inspect
+from rich.console import Console
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
 
 def tratarTexto(texto):
     texto = texto.replace("*","")
@@ -13,19 +14,26 @@ def main():
     ligar_microfone = False
     iniciar_assistente = True
     iniciar_microfone = True
+    primeira_interacao = True
 
-    genai.configure(api_key="AIzaSyCTy36HvN8vmiK06aZphHDVWvSHWKu6Ato")
-    # for m in genai.list_models():
-    #     if 'generateContent' in m.supported_generation_methods:
-    #         print(m.name)
+    genai.configure(api_key=API_GEMINI)
 
-    model = genai.GenerativeModel('gemini-pro')
 
+    model = genai.GenerativeModel('gemini-pro', safety_settings={
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+    })
 
     chat = model.start_chat(history=[])
-    # chat.send_message("Haja como um assistente conciso")
 
-    # print(chat.history)
+    contexto =        """
+                      Quero que você haja como um mestre de RPG.
+                      Seja conciso sempre.
+                      Me pergunte qual raça e classe eu quero jogar.
+                      """
+
 
     ### configura voz
     if iniciar_assistente:
@@ -33,27 +41,53 @@ def main():
         engine = pyttsx3.init()
 
         voices = engine.getProperty('voices')
-        engine.setProperty('rate', 180) # velocidade 120 = lento
+        engine.setProperty('rate', 230)
+ 
 
-        # print("\nLista de Vozes - Verifique o número\n")
-        # for indice, vozes in enumerate(voices): # listar vozes
-        #     print(indice, vozes.name)
-
-        voz = 0
+        voz = 2
         engine.setProperty('voice', voices[voz].id)
 
     if iniciar_microfone:
-        import speech_recognition as sr  # pip install SpeechRecognition
+        import speech_recognition as sr 
         r = sr.Recognizer()
         mic = sr.Microphone()
 
-    bem_vindo = "# Bem Vindo ao seu assistente com Gemini AI #"
-    print("")
-    print(len(bem_vindo) * "#")
-    print(bem_vindo)
-    print(len(bem_vindo) * "#")
-    print("###   Digite 'desligar' para encerrar    ###")
-    print("")
+        
+    Logo = """
+
+            
+        ██████╗░██████╗░░██████╗░
+        ██╔══██╗██╔══██╗██╔════╝░
+        ██████╔╝██████╔╝██║░░██╗░
+        ██╔══██╗██╔═══╝░██║░░╚██╗
+        ██║░░██║██║░░░░░╚██████╔╝
+        ╚═╝░░╚═╝╚═╝░░░░░░╚═════╝░
+
+        
+        █▀▀ █▀█ █▀▄▀█
+        █▄▄ █▄█ █ ▀ █
+
+        
+        ░██████╗░███████╗███╗░░░███╗██╗███╗░░██╗██╗
+        ██╔════╝░██╔════╝████╗░████║██║████╗░██║██║
+        ██║░░██╗░█████╗░░██╔████╔██║██║██╔██╗██║██║
+        ██║░░╚██╗██╔══╝░░██║╚██╔╝██║██║██║╚████║██║
+        ╚██████╔╝███████╗██║░╚═╝░██║██║██║░╚███║██║
+        ░╚═════╝░╚══════╝╚═╝░░░░░╚═╝╚═╝╚═╝░░╚══╝╚═╝
+
+    """
+    console = Console()
+    texto_negrito = f"[bold]{Logo}[/bold]"
+    console.print(texto_negrito)
+
+    print("""
+
+        Bem-vind@ à versão pré-alfa do meu RPG de NLP!
+
+        Para começar, pressione a tecla "espaço".
+          
+        Para sair, fale "Desligar".
+    """)
 
     while True:
 
@@ -70,11 +104,12 @@ def main():
                 try:
                     texto = r.recognize_google(audio, language="pt-BR")
                     print("Você disse: {}".format(texto))
+                    if primeira_interacao:
+                        texto = contexto +'\n'+ texto
+                        primeira_interacao = False
                 except Exception as e:
                     print("Não entendi o que você disse. Erro", e)
                     texto = ""
-        # else:
-        #     texto = input("Escreva sua mensagem (ou #sair): ")
 
             if texto.lower() == "desligar":
                 break
@@ -91,6 +126,12 @@ def main():
 
 
     print("Encerrando Chat")
+
+with open("api_key.txt") as file:
+    API_KEYS = file.readlines()
+
+API_GEMINI = str(API_KEYS[0]).strip("\n")
+
 
 if __name__ == '__main__':
     main()
